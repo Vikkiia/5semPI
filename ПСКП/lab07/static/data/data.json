@@ -1,0 +1,19 @@
+{
+  "cats": [
+    {
+      "name": "Barsic",
+      "age": 3,
+      "color": "Black"
+    },
+    {
+      "name": "Kitik",
+      "age": 5,
+      "color": "Gray"
+    },
+    {
+      "name": "Tyzik",
+      "age": 2,
+      "color": "Orange"
+    }
+  ]
+}

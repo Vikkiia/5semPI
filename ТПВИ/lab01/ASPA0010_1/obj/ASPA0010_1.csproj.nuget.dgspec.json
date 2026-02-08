@@ -1,0 +1,247 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\5sem\\ТПВИ\\lab01\\ASPA0010_1\\ASPA0010_1.csproj": {}
+  },
+  "projects": {
+    "E:\\5sem\\ТПВИ\\lab01\\ASPA0010_1\\ASPA0010_1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\5sem\\ТПВИ\\lab01\\ASPA0010_1\\ASPA0010_1.csproj",
+        "projectName": "ASPA0010_1",
+        "projectPath": "E:\\5sem\\ТПВИ\\lab01\\ASPA0010_1\\ASPA0010_1.csproj",
+        "packagesPath": "C:\\Users\\vk200\\.nuget\\packages\\",
+        "outputPath": "E:\\5sem\\ТПВИ\\lab01\\ASPA0010_1\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\vk200\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\bin\\Debug": {},
+          "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\ResultsAuthenticate.csproj": {
+                "projectPath": "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\ResultsAuthenticate.csproj"
+              },
+              "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\ResultsCollection.csproj": {
+                "projectPath": "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\ResultsCollection.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BSTU.Results.Authenticate": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "BSTU.Results.Collection": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\ResultsAuthenticate.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\ResultsAuthenticate.csproj",
+        "projectName": "BSTU.Results.Authenticate",
+        "projectPath": "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\ResultsAuthenticate.csproj",
+        "packagesPath": "C:\\Users\\vk200\\.nuget\\packages\\",
+        "outputPath": "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\vk200\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\bin\\Debug": {},
+          "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\ResultsCollection.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\ResultsCollection.csproj",
+        "projectName": "BSTU.Results.Collection",
+        "projectPath": "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\ResultsCollection.csproj",
+        "packagesPath": "C:\\Users\\vk200\\.nuget\\packages\\",
+        "outputPath": "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\vk200\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "E:\\5sem\\ТПВИ\\lab01\\ResultsAuthenticate\\bin\\Debug": {},
+          "E:\\5sem\\ТПВИ\\lab01\\ResultsCollection\\bin\\Debug": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

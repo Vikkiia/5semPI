@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cats>
+    <cat>
+        <name>Barsik</name>
+        <age>3</age>
+        <color>Black</color>
+    </cat>
+    <cat>
+        <name>Kitik</name>
+        <age>5</age>
+        <color>Gray</color>
+    </cat>
+    <cat>
+        <name>Tyzik</name>
+        <age>2</age>
+        <color>Orange</color>
+    </cat>
+</cats>

@@ -1,0 +1,657 @@
+2025-11-22 20:09:32.151 +03:00 [INF] Application starting up
+2025-11-22 20:10:15.118 +03:00 [VRB] GET /api/channels called
+2025-11-22 20:10:15.130 +03:00 [VRB] Getting all channels
+2025-11-22 20:10:15.135 +03:00 [DBG] No channels found
+2025-11-22 20:10:15.136 +03:00 [DBG] No channels found, returning 204
+2025-11-22 20:16:46.911 +03:00 [INF] Application starting up
+2025-11-22 20:20:04.111 +03:00 [VRB] POST /api/channels called with name awodkwao
+2025-11-22 20:20:04.118 +03:00 [VRB] Creating channel with name awodkwao
+2025-11-22 20:20:04.122 +03:00 [INF] Created channel "1ffe2955-3e0a-4177-9a60-c84da46c54dd" with name awodkwao and state Acive
+2025-11-22 20:20:04.126 +03:00 [INF] Created channel "1ffe2955-3e0a-4177-9a60-c84da46c54dd" with state Acive, returning 204
+2025-11-22 20:20:04.177 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:20:04.306 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:20:04.321 +03:00 [ERR] Connection id "0HNH9TBLCS90B", Request id "0HNH9TBLCS90B:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:20:09.579 +03:00 [VRB] GET /api/channels called
+2025-11-22 20:20:09.580 +03:00 [VRB] Getting all channels
+2025-11-22 20:20:09.584 +03:00 [DBG] Retrieved 1 channels
+2025-11-22 20:20:09.584 +03:00 [DBG] Returning 1 channels
+2025-11-22 20:20:55.561 +03:00 [VRB] POST /api/channels called with name aaaaaaa
+2025-11-22 20:20:55.561 +03:00 [VRB] Creating channel with name aaaaaaa
+2025-11-22 20:20:55.561 +03:00 [INF] Created channel "78214555-a40f-4d0d-a9cb-ef0719df779e" with name aaaaaaa and state Acive
+2025-11-22 20:20:55.561 +03:00 [INF] Created channel "78214555-a40f-4d0d-a9cb-ef0719df779e" with state Acive, returning 204
+2025-11-22 20:20:55.563 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:20:55.621 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:20:55.634 +03:00 [ERR] Connection id "0HNH9TBLCS90D", Request id "0HNH9TBLCS90D:00000002": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:21:18.836 +03:00 [VRB] POST /api/channels called with name bbbbbbbbb
+2025-11-22 20:21:18.837 +03:00 [VRB] Creating channel with name bbbbbbbbb
+2025-11-22 20:21:18.837 +03:00 [INF] Created channel "73dfc200-792a-4710-bf86-ab446841bfa9" with name bbbbbbbbb and state Acive
+2025-11-22 20:21:18.837 +03:00 [INF] Created channel "73dfc200-792a-4710-bf86-ab446841bfa9" with state Acive, returning 204
+2025-11-22 20:21:18.838 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:21:18.860 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:21:18.862 +03:00 [ERR] Connection id "0HNH9TBLCS90F", Request id "0HNH9TBLCS90F:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:21:31.101 +03:00 [VRB] POST /api/channels called with name biijijij
+2025-11-22 20:21:31.102 +03:00 [VRB] Creating channel with name biijijij
+2025-11-22 20:21:31.102 +03:00 [INF] Created channel "8241a358-31fe-47e3-9eaf-e88ed00d4abf" with name biijijij and state Close
+2025-11-22 20:21:31.103 +03:00 [INF] Created channel "8241a358-31fe-47e3-9eaf-e88ed00d4abf" with state Close, returning 204
+2025-11-22 20:21:31.104 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:21:31.133 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:21:31.138 +03:00 [ERR] Connection id "0HNH9TBLCS90H", Request id "0HNH9TBLCS90H:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:21:37.043 +03:00 [VRB] GET /api/channels called
+2025-11-22 20:21:37.044 +03:00 [VRB] Getting all channels
+2025-11-22 20:21:37.044 +03:00 [DBG] Retrieved 4 channels
+2025-11-22 20:21:37.044 +03:00 [DBG] Returning 4 channels
+2025-11-22 20:22:06.924 +03:00 [VRB] GET /api/channels/"78214555-a40f-4d0d-a9cb-ef0719df779e" called
+2025-11-22 20:22:06.925 +03:00 [VRB] Getting channel "78214555-a40f-4d0d-a9cb-ef0719df779e"
+2025-11-22 20:22:06.926 +03:00 [DBG] Found channel "78214555-a40f-4d0d-a9cb-ef0719df779e"
+2025-11-22 20:22:06.926 +03:00 [DBG] Returning channel "78214555-a40f-4d0d-a9cb-ef0719df779e"
+2025-11-22 20:24:32.288 +03:00 [VRB] PUT /api/channels called with command close
+2025-11-22 20:24:32.292 +03:00 [VRB] Changing channel status with command close
+2025-11-22 20:24:32.317 +03:00 [INF] Channel "78214555-a40f-4d0d-a9cb-ef0719df779e" closed (was Acive). Reason: uiuuiuui
+2025-11-22 20:24:32.317 +03:00 [VRB] Getting all channels
+2025-11-22 20:24:32.318 +03:00 [DBG] Retrieved 4 channels
+2025-11-22 20:24:32.318 +03:00 [DBG] Changed channel status, returning 4 channels
+2025-11-22 20:25:30.242 +03:00 [VRB] PUT /api/channels called with command open
+2025-11-22 20:25:30.242 +03:00 [VRB] Changing channel status with command open
+2025-11-22 20:25:30.243 +03:00 [INF] Channel "78214555-a40f-4d0d-a9cb-ef0719df779e" opened (was CLOSED)
+2025-11-22 20:25:30.243 +03:00 [VRB] Getting all channels
+2025-11-22 20:25:30.243 +03:00 [DBG] Retrieved 4 channels
+2025-11-22 20:25:30.243 +03:00 [DBG] Changed channel status, returning 4 channels
+2025-11-22 20:26:23.659 +03:00 [VRB] PUT /api/channels called with command close
+2025-11-22 20:26:23.660 +03:00 [VRB] Changing channel status with command close
+2025-11-22 20:26:23.661 +03:00 [INF] Channel "1ffe2955-3e0a-4177-9a60-c84da46c54dd" closed (was Acive). Reason: uiuuiuui
+2025-11-22 20:26:23.661 +03:00 [INF] Channel "8241a358-31fe-47e3-9eaf-e88ed00d4abf" closed (was Close). Reason: uiuuiuui
+2025-11-22 20:26:23.661 +03:00 [INF] Channel "73dfc200-792a-4710-bf86-ab446841bfa9" closed (was Acive). Reason: uiuuiuui
+2025-11-22 20:26:23.661 +03:00 [INF] Channel "78214555-a40f-4d0d-a9cb-ef0719df779e" closed (was ACTIVE). Reason: uiuuiuui
+2025-11-22 20:26:23.662 +03:00 [VRB] Getting all channels
+2025-11-22 20:26:23.662 +03:00 [DBG] Retrieved 4 channels
+2025-11-22 20:26:23.662 +03:00 [DBG] Changed channel status, returning 4 channels
+2025-11-22 20:26:53.805 +03:00 [VRB] PUT /api/channels called with command open
+2025-11-22 20:26:53.805 +03:00 [VRB] Changing channel status with command open
+2025-11-22 20:26:53.805 +03:00 [INF] Channel "1ffe2955-3e0a-4177-9a60-c84da46c54dd" opened (was CLOSED)
+2025-11-22 20:26:53.805 +03:00 [INF] Channel "8241a358-31fe-47e3-9eaf-e88ed00d4abf" opened (was CLOSED)
+2025-11-22 20:26:53.805 +03:00 [INF] Channel "73dfc200-792a-4710-bf86-ab446841bfa9" opened (was CLOSED)
+2025-11-22 20:26:53.805 +03:00 [INF] Channel "78214555-a40f-4d0d-a9cb-ef0719df779e" opened (was CLOSED)
+2025-11-22 20:26:53.805 +03:00 [VRB] Getting all channels
+2025-11-22 20:26:53.806 +03:00 [DBG] Retrieved 4 channels
+2025-11-22 20:26:53.806 +03:00 [DBG] Changed channel status, returning 4 channels
+2025-11-22 20:27:58.267 +03:00 [VRB] PUT /api/channels called with command close
+2025-11-22 20:27:58.267 +03:00 [VRB] Changing channel status with command close
+2025-11-22 20:27:58.268 +03:00 [INF] Channel "78214555-a40f-4d0d-a9cb-ef0719df779e" closed (was ACTIVE). Reason: null
+2025-11-22 20:27:58.268 +03:00 [VRB] Getting all channels
+2025-11-22 20:27:58.268 +03:00 [DBG] Retrieved 4 channels
+2025-11-22 20:27:58.268 +03:00 [DBG] Changed channel status, returning 4 channels
+2025-11-22 20:29:21.881 +03:00 [VRB] DELETE /api/channels called with command del
+2025-11-22 20:29:21.883 +03:00 [VRB] Deleting channels with command del
+2025-11-22 20:29:21.884 +03:00 [INF] Deleting 1 CLOSED channels
+2025-11-22 20:29:21.886 +03:00 [VRB] Getting all channels
+2025-11-22 20:29:21.886 +03:00 [DBG] Retrieved 3 channels
+2025-11-22 20:29:21.886 +03:00 [INF] Deleted channels, returning 3 remaining channels
+2025-11-22 20:29:43.114 +03:00 [VRB] DELETE /api/channels called with command del
+2025-11-22 20:29:43.115 +03:00 [VRB] Deleting channels with command del
+2025-11-22 20:29:43.116 +03:00 [INF] Deleting all 3 channels
+2025-11-22 20:29:43.116 +03:00 [VRB] Getting all channels
+2025-11-22 20:29:43.116 +03:00 [DBG] No channels found
+2025-11-22 20:29:43.116 +03:00 [INF] Deleted channels, returning 0 remaining channels
+2025-11-22 20:30:09.187 +03:00 [VRB] POST /api/channels called with name awodkwao
+2025-11-22 20:30:09.187 +03:00 [VRB] Creating channel with name awodkwao
+2025-11-22 20:30:09.187 +03:00 [INF] Created channel "92ba145e-71d9-4624-976e-360e186b80f8" with name awodkwao and state Acive
+2025-11-22 20:30:09.187 +03:00 [INF] Created channel "92ba145e-71d9-4624-976e-360e186b80f8" with state Acive, returning 204
+2025-11-22 20:30:09.189 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:30:09.222 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:30:09.224 +03:00 [ERR] Connection id "0HNH9TBLCS90P", Request id "0HNH9TBLCS90P:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:30:16.198 +03:00 [VRB] POST /api/channels called with name kwao
+2025-11-22 20:30:16.198 +03:00 [VRB] Creating channel with name kwao
+2025-11-22 20:30:16.198 +03:00 [INF] Created channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67" with name kwao and state Acive
+2025-11-22 20:30:16.198 +03:00 [INF] Created channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67" with state Acive, returning 204
+2025-11-22 20:30:16.199 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:30:16.242 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:30:16.246 +03:00 [ERR] Connection id "0HNH9TBLCS90R", Request id "0HNH9TBLCS90R:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:30:23.027 +03:00 [VRB] POST /api/channels called with name kwajiijijjo
+2025-11-22 20:30:23.027 +03:00 [VRB] Creating channel with name kwajiijijjo
+2025-11-22 20:30:23.028 +03:00 [INF] Created channel "883aae49-b517-45c2-a2b4-260700a11c7e" with name kwajiijijjo and state Acive
+2025-11-22 20:30:23.028 +03:00 [INF] Created channel "883aae49-b517-45c2-a2b4-260700a11c7e" with state Acive, returning 204
+2025-11-22 20:30:23.030 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:30:23.052 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:30:23.058 +03:00 [ERR] Connection id "0HNH9TBLCS90T", Request id "0HNH9TBLCS90T:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:30:33.156 +03:00 [VRB] POST /api/channels called with name kwajiijijjo
+2025-11-22 20:30:33.157 +03:00 [VRB] Creating channel with name kwajiijijjo
+2025-11-22 20:30:33.158 +03:00 [INF] Created channel "cb66b110-2122-49c8-bde0-c6c4b74d522c" with name kwajiijijjo and state Close
+2025-11-22 20:30:33.158 +03:00 [INF] Created channel "cb66b110-2122-49c8-bde0-c6c4b74d522c" with state Close, returning 204
+2025-11-22 20:30:33.160 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:30:33.201 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:30:33.206 +03:00 [ERR] Connection id "0HNH9TBLCS90V", Request id "0HNH9TBLCS90V:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:30:38.164 +03:00 [VRB] POST /api/channels called with name kwajiijo
+2025-11-22 20:30:38.164 +03:00 [VRB] Creating channel with name kwajiijo
+2025-11-22 20:30:38.164 +03:00 [INF] Created channel "34993a7e-e0d3-4a49-847d-835282aef604" with name kwajiijo and state Close
+2025-11-22 20:30:38.165 +03:00 [INF] Created channel "34993a7e-e0d3-4a49-847d-835282aef604" with state Close, returning 204
+2025-11-22 20:30:38.166 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-11-22 20:30:38.186 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-11-22 20:30:38.188 +03:00 [ERR] Connection id "0HNH9TBLCS911", Request id "0HNH9TBLCS911:00000001": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.FirstWriteAsyncInternal(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.WritePipeAsync(ReadOnlyMemory`1 data, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream.WriteAsync(ReadOnlyMemory`1 source, CancellationToken cancellationToken)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-11-22 20:32:35.318 +03:00 [VRB] GET /api/channels called
+2025-11-22 20:32:35.318 +03:00 [VRB] Getting all channels
+2025-11-22 20:32:35.318 +03:00 [DBG] Retrieved 5 channels
+2025-11-22 20:32:35.318 +03:00 [DBG] Returning 5 channels
+2025-11-22 20:33:13.022 +03:00 [VRB] POST /api/queue called with operation new on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:33:13.026 +03:00 [VRB] Executing queue operation new on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:33:13.026 +03:00 [ERR] Unknown queue operation new
+2025-11-22 20:33:13.029 +03:00 [WRN] Queue operation failed: Unknown operation: new
+2025-11-22 20:35:06.229 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:35:06.229 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:35:06.229 +03:00 [WRN] Queue operation failed: Data is required for enqueue operation
+2025-11-22 20:36:34.169 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:36:34.169 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:36:34.169 +03:00 [WRN] Queue operation failed: Data is required for enqueue operation
+2025-11-22 20:36:41.691 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:36:41.691 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:36:41.692 +03:00 [WRN] Queue operation failed: Data is required for enqueue operation
+2025-11-22 20:37:39.466 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:37:39.466 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:37:39.466 +03:00 [WRN] Queue operation failed: Data is required for enqueue operation
+2025-11-22 20:37:43.878 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:37:43.878 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:37:43.881 +03:00 [WRN] Enqueue operation timed out after 30 seconds on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:37:43.889 +03:00 [WRN] Queue operation failed: Enqueue timeout after 30 seconds
+2025-11-22 20:38:21.518 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:38:21.518 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:38:21.519 +03:00 [WRN] Enqueue operation timed out after 30 seconds on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:38:21.525 +03:00 [WRN] Queue operation failed: Enqueue timeout after 30 seconds
+2025-11-22 20:38:29.228 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:38:29.228 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:38:29.229 +03:00 [WRN] Enqueue operation timed out after 30 seconds on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:38:29.245 +03:00 [WRN] Queue operation failed: Enqueue timeout after 30 seconds
+2025-11-22 20:39:12.865 +03:00 [VRB] GET /api/channels called
+2025-11-22 20:39:12.865 +03:00 [VRB] Getting all channels
+2025-11-22 20:39:12.865 +03:00 [DBG] Retrieved 5 channels
+2025-11-22 20:39:12.865 +03:00 [DBG] Returning 5 channels
+2025-11-22 20:40:53.801 +03:00 [VRB] POST /api/channels called with name 
+2025-11-22 20:40:53.801 +03:00 [ERR] Invalid command for channel creation: enqueue
+2025-11-22 20:40:56.491 +03:00 [VRB] POST /api/channels called with name 
+2025-11-22 20:40:56.492 +03:00 [ERR] Invalid command for channel creation: enqueue
+2025-11-22 20:41:13.333 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:41:13.333 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:41:13.333 +03:00 [WRN] Enqueue operation timed out after 30 seconds on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:41:13.339 +03:00 [WRN] Queue operation failed: Enqueue timeout after 30 seconds
+2025-11-22 20:41:29.460 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:41:29.460 +03:00 [VRB] Executing queue operation enqueue on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:41:29.460 +03:00 [WRN] Enqueue operation timed out after 30 seconds on channel "84e3b9a6-6fe3-4d28-8280-fee655fcca67"
+2025-11-22 20:41:29.468 +03:00 [WRN] Queue operation failed: Enqueue timeout after 30 seconds
+2025-11-22 20:42:44.302 +03:00 [VRB] POST /api/channels called with name adiwadk
+2025-11-22 20:42:44.302 +03:00 [VRB] Creating channel with name adiwadk
+2025-11-22 20:42:44.302 +03:00 [INF] Created channel "5d4e381a-2a14-4680-ba01-1344a7791668" with name adiwadk and state ACTIVE
+2025-11-22 20:42:44.302 +03:00 [INF] Created channel "5d4e381a-2a14-4680-ba01-1344a7791668" with state ACTIVE, returning 201
+2025-11-22 20:42:49.991 +03:00 [VRB] GET /api/channels called
+2025-11-22 20:42:49.991 +03:00 [VRB] Getting all channels
+2025-11-22 20:42:49.991 +03:00 [DBG] Retrieved 6 channels
+2025-11-22 20:42:49.991 +03:00 [DBG] Returning 6 channels
+2025-11-22 20:43:09.346 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:09.346 +03:00 [VRB] Executing queue operation enqueue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:09.356 +03:00 [DBG] Enqueued data to channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:09.356 +03:00 [DBG] Queue operation enqueue completed successfully
+2025-11-22 20:43:12.531 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:12.531 +03:00 [VRB] Executing queue operation enqueue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:12.531 +03:00 [DBG] Enqueued data to channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:12.532 +03:00 [DBG] Queue operation enqueue completed successfully
+2025-11-22 20:43:13.655 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:13.655 +03:00 [VRB] Executing queue operation enqueue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:13.655 +03:00 [DBG] Enqueued data to channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:13.655 +03:00 [DBG] Queue operation enqueue completed successfully
+2025-11-22 20:43:48.335 +03:00 [VRB] POST /api/queue called with operation peek on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:48.336 +03:00 [VRB] Executing queue operation peek on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:48.338 +03:00 [DBG] Peeked data from channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:48.339 +03:00 [DBG] Queue operation peek completed successfully
+2025-11-22 20:43:52.357 +03:00 [VRB] POST /api/queue called with operation peek on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:52.357 +03:00 [VRB] Executing queue operation peek on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:52.357 +03:00 [DBG] Peeked data from channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:43:52.358 +03:00 [DBG] Queue operation peek completed successfully
+2025-11-22 20:44:33.798 +03:00 [VRB] POST /api/queue called with operation enqueue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:44:33.798 +03:00 [VRB] Executing queue operation enqueue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:44:33.798 +03:00 [DBG] Enqueued data to channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:44:33.798 +03:00 [DBG] Queue operation enqueue completed successfully
+2025-11-22 20:45:50.629 +03:00 [VRB] POST /api/queue called with operation peek on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:45:50.629 +03:00 [VRB] Executing queue operation peek on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:45:50.629 +03:00 [DBG] Peeked data from channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:45:50.629 +03:00 [DBG] Queue operation peek completed successfully
+2025-11-22 20:46:42.435 +03:00 [VRB] POST /api/queue called with operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:46:42.435 +03:00 [VRB] Executing queue operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:46:42.440 +03:00 [DBG] Dequeued data from channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:46:42.441 +03:00 [DBG] Queue operation dequeue completed successfully
+2025-11-22 20:47:20.294 +03:00 [VRB] POST /api/queue called with operation  on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:47:20.295 +03:00 [VRB] Executing queue operation  on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:47:20.295 +03:00 [ERR] Unknown queue operation 
+2025-11-22 20:47:20.298 +03:00 [WRN] Queue operation failed: Unknown operation: 
+2025-11-22 20:47:52.589 +03:00 [VRB] POST /api/queue called with operation  on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:47:52.589 +03:00 [VRB] Executing queue operation  on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:47:52.589 +03:00 [ERR] Unknown queue operation 
+2025-11-22 20:47:52.594 +03:00 [WRN] Queue operation failed: Unknown operation: 
+2025-11-22 20:49:32.725 +03:00 [VRB] POST /api/queue called with operation  on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:32.725 +03:00 [VRB] Executing queue operation  on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:32.725 +03:00 [ERR] Unknown queue operation 
+2025-11-22 20:49:32.736 +03:00 [WRN] Queue operation failed: Unknown operation: 
+2025-11-22 20:49:46.615 +03:00 [VRB] POST /api/queue called with operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:46.616 +03:00 [VRB] Executing queue operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:46.616 +03:00 [DBG] Dequeued data from channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:46.616 +03:00 [DBG] Queue operation dequeue completed successfully
+2025-11-22 20:49:56.993 +03:00 [VRB] POST /api/queue called with operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:56.993 +03:00 [VRB] Executing queue operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:56.993 +03:00 [DBG] Dequeued data from channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:56.993 +03:00 [DBG] Queue operation dequeue completed successfully
+2025-11-22 20:49:58.410 +03:00 [VRB] POST /api/queue called with operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:58.410 +03:00 [VRB] Executing queue operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:58.411 +03:00 [DBG] Dequeued data from channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:58.412 +03:00 [DBG] Queue operation dequeue completed successfully
+2025-11-22 20:49:59.792 +03:00 [VRB] POST /api/queue called with operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"
+2025-11-22 20:49:59.792 +03:00 [VRB] Executing queue operation dequeue on channel "5d4e381a-2a14-4680-ba01-1344a7791668"

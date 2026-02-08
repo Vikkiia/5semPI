@@ -20,6 +20,7 @@ dist/
 build/
 
 # IDE
+.rar
 .vs/
 .vscode/
 .idea/
@@ -27,6 +28,9 @@ build/
 *.swo
 *~
 
+*Debug/
+*Release/
+*x64/ 
 # OS
 .DS_Store
 Thumbs.db

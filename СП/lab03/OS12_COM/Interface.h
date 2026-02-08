@@ -1,0 +1,37 @@
+#pragma once
+#include <Windows.h>
+#include <objbase.h> 
+#include <initguid.h> // Добавляет определения GUID
+
+
+// {5B93347F-116F-4093-84F3-80C4701E2001}
+static const CLSID CLSID_OS12 =
+//{ 0x5b93347f, 0x116f, 0x4093, { 0x84, 0xf3, 0x80, 0xc4, 0x70, 0x1e, 0x20, 0x1 } };
+{ 0x925c2c7, 0x6b1d, 0x4b97, { 0xb0, 0x9b, 0x28, 0xeb, 0x73, 0xf0, 0x17, 0xc1 } };
+
+
+
+
+// {A817E7A2-43FA-11D0-9E44-00AA00B67701}
+static const IID IID_IAdder =
+//{ 0xa817e7a2, 0x43fa, 0x11d0, { 0x9e, 0x44, 0x00, 0xaa, 0x00, 0xb6, 0x77, 0x1 } };
+{ 0x9453451d, 0x56a5, 0x4ca3, { 0x98, 0x33, 0xd4, 0x2c, 0x58, 0xb6, 0x63, 0xe7 } };
+
+// {A817E7A3-43FA-11D0-9E44-00AA00B67702}
+static const IID IID_IMultiplier =
+//{ 0xa817e7a3, 0x43fa, 0x11d0, { 0x9e, 0x44, 0x00, 0xaa, 0x00, 0xb6, 0x77, 0x2 } };
+{ 0x8498f1bc, 0x46b3, 0x4ad1, { 0xa8, 0x62, 0xe5, 0xaf, 0x4f, 0x9a, 0x64, 0xa1 } };
+
+// Интерфейс IAdder
+interface IAdder : IUnknown
+{
+    virtual HRESULT __stdcall Add(const double x, const double y, double& z) = 0;
+    virtual HRESULT __stdcall Sub(const double x, const double y, double& z) = 0;
+};
+
+// Интерфейс IMultiplier
+interface IMultiplier : IUnknown
+{
+    virtual HRESULT __stdcall Mul(const double x, const double y, double& z) = 0;
+    virtual HRESULT __stdcall Div(const double x, const double y, double& z) = 0;
+};

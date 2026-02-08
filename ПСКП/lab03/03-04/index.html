@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab_3</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    result.innerHTML = "";
+        var n = 0;                
+        const d = Date.now();       
+        const full = Date.now();    
+        for (var k = 0; k <= 20; k++) {
+            fetch(`http://localhost:5000/fact?k=${k}`, {    
+                method: "GET",
+                headers: {"Content-Type": "application/json", "Accept": "application/json"}
+            })
+            .then(response => response.json())
+            .then((pdata) => {
+                result.innerHTML += (n++) + ". Результат: " + (Date.now()-d) + "-" + pdata.k + "/" + pdata.fact + "<br/>";
+                if (n == 21) {
+                    result.innerHTML += "Общее время: " + (Date.now() - full) + "</br>";
+                }
+            })
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab</title>
+    </head>
+    <body>
+       <h2>Get</h2>
+        <button onclick="getData()">Show Records</button>
+        <div id="result"></div>
+
+        <h2>Post</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br>
+        <label for="bday">Birthday:</label>
+        <input type="date" id="bday" ><br>
+        <button onclick="postData()">Add Record</button>
+
+        <h2>Put</h2>
+        <label for="idUpdate">ID:</label>
+        <input type="text" id="idUpdate"><br>
+        <button onclick="getInfo()">Get info</button>
+        <p class="ero" style="display: none">Error</p>
+
+        <label class="c" style="display: none" for="nameUpdate">Name:</label>
+        <input class="c" style="display: none" type="text" id="nameUpdate"><br>
+        <label class="c" style="display: none" for="bdayUpdate">Birthday:</label>
+        <input class="c" style="display: none" type="date" id="bdayUpdate"><br>
+        <button class="c" style="display: none" onclick="putData()">Update Record</button>
+
+        <h2>Delete</h2>
+        <label for="idDelete">ID:</label>
+        <input type="text" id="idDelete"><br>
+        <button onclick="deleteData()">Delete Record</button>
+
+        
+
+        <script>
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+            today = yyyy + '-' + mm + '-' + dd;
+        
+            document.getElementById("bday").setAttribute("max", today);
+            document.getElementById("bdayUpdate").setAttribute("max", today);
+        
+            const getInfo = () => {
+                fetch('http://localhost:5000/api/db', {
+                    method: 'GET',
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    const ids = Number.parseInt(document.getElementById("idUpdate").value);
+                    const index = data.findIndex(a => a.id === ids);
+                    if (index !== -1) {
+                        [...document.getElementsByClassName("c")].forEach(el => {
+                            el.style.display = "block";
+                        });
+                        document.querySelector(".ero").style.display = "none";
+                        document.getElementById("nameUpdate").value = data[index].name;
+                        document.getElementById("bdayUpdate").value = data[index].dateOfBirth;
+                        console.log(data[index]);
+                    } else {
+                        [...document.getElementsByClassName("c")].forEach(el => {
+                            el.style.display = "none";
+                        });
+                        document.querySelector(".ero").style.display = "block";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+            const deleteData = () => {
+                const id = document.getElementById("idDelete").value;
+                if (id) {
+                    fetch(`http://localhost:5000/api/db?id=${id}`, {
+                        method: 'DELETE',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.message === 'Row not found') {
+                            document.getElementById("result").innerHTML = "Error: Row not found!";
+                        } else {
+                            document.getElementById("result").innerHTML = JSON.stringify(data);
+                        }
+                    })
+                    .catch(error => {
+                        document.getElementById("result").innerHTML = "Error!";
+                        console.error('Error:', error);
+                    });
+                } else {
+                    alert("Please enter an ID.");
+                }
+            }
+            const getData = () => {
+                fetch('http://localhost:5000/api/db', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").innerHTML = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+            const postData = () => {
+                const name = document.getElementById("name").value;
+                const dateOfBirth = document.getElementById("bday").value;
+                if (name!=="" && dateOfBirth !== "") {
+                    const data = { name, dateOfBirth };
+                    fetch('http://localhost:5000/api/db', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("result").innerHTML = JSON.stringify(data);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                }
+            }
+            const putData = () => {
+                const id = Number.parseInt(document.getElementById("idUpdate").value);
+                const name = document.getElementById("nameUpdate").value;
+                const bday = document.getElementById("bdayUpdate").value;
+                if (!id || !name || !bday) {
+                    alert("Please fill in all fields.");
+                    return;
+                }
+                const today = new Date();
+                const formattedToday = today.toISOString().split('T')[0];
+                if (bday <= formattedToday) {
+                    const data = { id, name, dateOfBirth: bday };
+                    fetch('http://localhost:5000/api/db', {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById("result").innerHTML = JSON.stringify(data);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                } else {
+                    alert("Birthday must be less than or equal to today's date.");
+                }
+            }
+        </script>
+    </body>
+</html>

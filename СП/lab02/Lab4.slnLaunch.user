@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "OS11_START\\OS11_START.vcxproj",
+        "Action": "Start",
+        "DebugTarget": "Локальный отладчик Windows"
+      },
+      {
+        "Path": "OS11_02\\OS11_02.vcxproj",
+        "Action": "Start",
+        "DebugTarget": "Локальный отладчик Windows"
+      }
+    ]
+  }
+]

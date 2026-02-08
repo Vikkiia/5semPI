@@ -1,0 +1,161 @@
+//#define _CRT_SECURE_NO_WARNINGS
+#include "pch.h"
+#include "Registry.h"
+#include "Windows.h"
+#include <objbase.h>
+#include <assert.h>
+#include <stdio.h>
+//#include <iostream>
+//#include "SEQLOG.h"
+
+
+BOOL setKeyAndValue(const WCHAR* szKey,         // smw:const char* szKey
+	const WCHAR* szSubkey,                      // smw:const char* szSubkey,
+	const WCHAR* szValue);                      // smw: const char* szValue
+
+
+void CLSIDtochar(const CLSID& clsid,            // Convert a CLSID into a char string.
+	WCHAR* szCLSID,                             // smw:char* szCLSID,
+	int length);
+
+LONG recursiveDeleteKey(HKEY hKeyParent, const WCHAR* szKeyChild); // Delete szKeyChild and all of its descendents.
+
+const int CLSID_STRING_SIZE = 39;
+
+HRESULT RegisterServer(const WCHAR* szModulePath, // œ”“‹   DLL
+	const CLSID& clsid,         // Class ID
+	const WCHAR* szFriendlyName, // Friendly Name
+	const WCHAR* szVerIndProgID, // Programmatic
+	const WCHAR* szProgID)       //   IDs
+{
+
+	WCHAR szCLSID[CLSID_STRING_SIZE];
+	CLSIDtochar(clsid, szCLSID, sizeof(szCLSID));
+
+	WCHAR szKey[264];
+	wcscpy_s(szKey, L"CLSID\\");
+	wcscat_s(szKey, szCLSID);
+
+	setKeyAndValue(szKey, NULL, szFriendlyName);
+
+	setKeyAndValue(szKey, L"InprocServer32", szModulePath);
+
+	setKeyAndValue(szKey, L"ProgID", szProgID);
+	setKeyAndValue(szKey, L"VersionIndependentProgID", szVerIndProgID);
+	setKeyAndValue(szVerIndProgID, NULL, szFriendlyName);
+	setKeyAndValue(szVerIndProgID, L"CLSID", szCLSID);
+	setKeyAndValue(szVerIndProgID, L"CurVer", szProgID);
+	setKeyAndValue(szProgID, NULL, szFriendlyName);
+	setKeyAndValue(szProgID, L"CLSID", szCLSID);
+
+	return S_OK;
+}
+
+HRESULT UnregisterServer(const CLSID& clsid,
+	const WCHAR* szVerIndProgID,
+	const WCHAR* szProgID)
+
+{
+	WCHAR szCLSID[CLSID_STRING_SIZE];
+	CLSIDtochar(clsid, szCLSID, sizeof(szCLSID));
+
+	WCHAR szKey[264];
+	wcscpy_s(szKey, L"CLSID\\");
+	wcscat_s(szKey, szCLSID);
+
+	LONG lResult = recursiveDeleteKey(HKEY_CLASSES_ROOT, szKey);
+	assert((lResult == ERROR_SUCCESS) || (lResult == ERROR_FILE_NOT_FOUND)); // Subkey may not exist.
+	lResult = recursiveDeleteKey(HKEY_CLASSES_ROOT, szVerIndProgID);
+	assert((lResult == ERROR_SUCCESS) || (lResult == ERROR_FILE_NOT_FOUND)); // Subkey may not exist.
+	lResult = recursiveDeleteKey(HKEY_CLASSES_ROOT, szProgID);
+	assert((lResult == ERROR_SUCCESS) || (lResult == ERROR_FILE_NOT_FOUND)); // Subkey may not exist.
+
+	return S_OK;
+}
+
+
+
+void CLSIDtochar(const CLSID& clsid,      // Convert a CLSID to a char string.   
+	WCHAR* szCLSID,          // smw:char* szCLSID,
+	int length)
+{
+	assert(length >= CLSID_STRING_SIZE);
+
+	LPOLESTR wszCLSID = NULL;
+	HRESULT hr = StringFromCLSID(clsid, &wszCLSID);
+	assert(SUCCEEDED(hr));
+	wcscpy_s(szCLSID, CLSID_STRING_SIZE, wszCLSID);
+	CoTaskMemFree(wszCLSID);
+
+}
+
+
+LONG recursiveDeleteKey(HKEY hKeyParent,           // Parent of key to delete
+	const WCHAR* lpszKeyChild)  // Key to delete
+{
+
+	HKEY hKeyChild;
+	LONG lRes = RegOpenKeyEx(hKeyParent, lpszKeyChild, 0,
+		KEY_ALL_ACCESS, &hKeyChild);
+	if (lRes != ERROR_SUCCESS)
+	{
+		return lRes;
+	}
+
+	FILETIME time;
+	WCHAR szBuffer[256];
+	DWORD dwSize = 256;
+	while (RegEnumKeyEx(hKeyChild, 0, szBuffer, &dwSize, NULL,
+		NULL, NULL, &time) == S_OK)
+	{
+		lRes = recursiveDeleteKey(hKeyChild, szBuffer);
+		if (lRes != ERROR_SUCCESS)
+		{
+			RegCloseKey(hKeyChild);
+			return lRes;
+		}
+		dwSize = 256;
+	}
+
+	RegCloseKey(hKeyChild);
+	return RegDeleteKey(hKeyParent, lpszKeyChild);
+}
+
+BOOL setKeyAndValue(const WCHAR* szKey,         // smw:const char* szKey
+	const WCHAR* szSubkey,      // smw:const char* szSubkey,
+	const WCHAR* szValue)       // smw: const char* szValue
+{
+	HKEY hKey;
+	WCHAR szKeyBuf[1024];
+
+	wcscpy_s(szKeyBuf, szKey);
+
+	if (szSubkey != NULL)
+	{
+		wcscat_s(szKeyBuf, L"\\");
+		wcscat_s(szKeyBuf, szSubkey);
+	}
+	long lResult = RegCreateKeyEx(HKEY_CLASSES_ROOT,
+		szKeyBuf,
+		0, NULL, REG_OPTION_NON_VOLATILE,
+		KEY_ALL_ACCESS, NULL,
+		&hKey, NULL);
+
+	if (lResult != ERROR_SUCCESS)
+	{
+		WCHAR msg[1024];
+		wsprintfW(msg, L" Àﬁ◊ Õ≈ —Œ«ƒ¿Õ!  Ó‰ Ó¯Ë·ÍË: %d (0x%X).  Î˛˜: %s", lResult, lResult, szKeyBuf);
+		MessageBoxW(NULL, msg, L" –»“»◊≈— ¿ﬂ Œÿ»¡ ¿ –≈≈—“–¿", MB_OK | MB_ICONERROR);
+		return FALSE;
+	}
+
+	if (szValue != NULL)
+	{
+		RegSetValueEx(hKey, NULL, 0, REG_SZ,
+			(BYTE*)szValue,
+			(wcslen(szValue) + 1) * sizeof(WCHAR));
+	}
+
+	RegCloseKey(hKey);
+	return TRUE;
+}

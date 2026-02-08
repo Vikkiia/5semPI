@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кафедры</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Управление кафедрами</h1>
+        
+        <div class="form-section">
+            <h2>Добавить кафедру</h2>
+            <form id="addPulpitForm">
+                <input type="text" id="pulpit" placeholder="Код кафедры (например, P004)" required>
+                <input type="text" id="pulpit_name" placeholder="Название кафедры" required>
+                <input type="text" id="faculty" placeholder="Код факультета (например, F002)" required>
+                <button type="submit">Добавить кафедру</button>
+            </form>
+        </div>
+        
+        <div class="list-section">
+            <h2>Список кафедр</h2>
+            <button id="getPulpitsButton">Получить кафедры</button>
+            <ul id="pulpitList"></ul>
+        </div>
+        
+        <div class="form-section">
+            <h2>Обновить кафедру</h2>
+            <form id="updatePulpitForm">
+                <input type="text" id="update_pulpit_id" placeholder="Код кафедры (например, P004)" required>
+                <input type="text" id="update_pulpit_name" placeholder="Новое название кафедры" required>
+                <input type="text" id="update_faculty_id" placeholder="Код факультета (например, F002)" required>
+                <button type="submit">Обновить кафедру</button>
+            </form>
+        </div>
+
+        <div class="form-section">
+            <h2>Удалить кафедру</h2>
+            <form id="deletePulpitForm">
+                <input type="text" id="delete_pulpit_id" placeholder="Код кафедры для удаления (например, P004)" required>
+                <button type="submit">Удалить кафедру</button>
+            </form>
+        </div>
+
+        <div id="errorSection" class="error-section hidden"></div>
+    </div>
+
+    <script>
+        
+        document.getElementById('getPulpitsButton').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/api/pulpits');
+                if (!response.ok) throw new Error('Ошибка при получении кафедр');
+
+                const data = await response.json();
+                const list = document.getElementById('pulpitList');
+                list.innerHTML = '';
+
+                data.forEach(pulpit => {
+                    const item = document.createElement('li');
+                    item.textContent = `${pulpit.pulpit}: ${pulpit.pulpit_name} (Факультет: ${pulpit.faculty})`;
+                    list.appendChild(item);
+                });
+            } catch (error) {
+                displayError(error.message);
+            }
+        });
+
+        // Добавление кафедры
+        document.getElementById('addPulpitForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const pulpit = document.getElementById('pulpit').value;
+            const pulpit_name = document.getElementById('pulpit_name').value;
+            const faculty = document.getElementById('faculty').value;
+
+            try {
+                const response = await fetch('/api/pulpits', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pulpit, pulpit_name, faculty })
+                });
+
+                if (!response.ok) throw new Error('Ошибка при добавлении кафедры');
+
+                await response.json();
+                alert('Кафедра успешно добавлена');
+            } catch (error) {
+                displayError(error.message);
+            }
+        });
+
+        // Обновление кафедры
+        document.getElementById('updatePulpitForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const pulpit = document.getElementById('update_pulpit_id').value;
+            const pulpit_name = document.getElementById('update_pulpit_name').value;
+            const faculty = document.getElementById('update_faculty_id').value;
+
+            try {
+                const response = await fetch('/api/pulpits', {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pulpit, pulpit_name, faculty })
+                });
+
+                const responseData = await response.json();
+
+                if (response.ok) {
+                    alert('Кафедра успешно обновлена');
+                } else {
+                    throw new Error(responseData.error || 'Ошибка при обновлении кафедры');
+                }
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+
+        // Удаление кафедры
+        document.getElementById('deletePulpitForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const pulpitId = document.getElementById('delete_pulpit_id').value;
+
+            try {
+                const response = await fetch(`/api/pulpits/${pulpitId}`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) throw new Error('Ошибка при удалении кафедры');
+
+                await response.json();
+                alert('Кафедра успешно удалена');
+            } catch (error) {
+                displayError(error.message);
+            }
+        });
+
+        function displayError(message) {
+            const errorSection = document.getElementById('errorSection');
+            errorSection.textContent = message;
+            errorSection.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
